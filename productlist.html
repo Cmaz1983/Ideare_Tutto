@@ -13,115 +13,159 @@
     <!-- Font Awsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
-
 </head>
 
 <body>
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <!-- Navigation Section [Start]-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!--[Mobile Navigation]-->
-        <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-                <nav class="navbar navbar-light bg-light">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="iproductlist.html">Products</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="Categories.html">Categories</a>
-                    </li>
-            </ul>
-            <!--[Register Link]-->
-            <div class="register mr-2"> <a href="register.html">Need an account?</a> </div>
-            <!--[Username Form]-->
-            <form class="form-inline mr-2">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="mobile-nav-container">
+        <ul class="navbar-nav mr-auto">
+            <div id="mobile-header-user-control">
+                <a href="#" class="nav-link text-dark text-center">Welcome, cmaz!</a>
+                <a class="btn btn-dark ml-2" href="#">
+                    <i class="fas fa-user-times"></i> Logout</a>
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listings.php">Products</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="#" id="navbarDropdown">Catagories</a>
+                <div class="" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">A Cat</a>
                 </div>
-            </form>
-            <!--[Password Form]-->
-            <form class="form-inline">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><img src="images/padlock.png" style="height: 20px"></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+            </li>
+        </ul>
+    </div>
+    <div class="global-container">
+        <div class="mobile-basket-widget">
+            <div class="mobile-basket-widget-inner">
+                <div class="mobile-basket-widget-title">
+                    My Basket
                 </div>
-            </form>
-            <button type="button" class="btn btn-outline-dark ml-2">Login</button>
+                <div class="float-right">
+                    <div class="mobile-basket-widget-total">
+                        <span class="mobile-basket-widget-items">2</span> x <span class="mobile-basket-widget-price">£2.70</span>
+                    </div>
+                    <a href="/cart.php" class="btn btn-dark mobile-basket-widget-btn">View Cart</a>
+                </div>
+            </div>
         </div>
-    </nav><!-- Navigation Section [End]-->
-    <div class="container">
-        <h1> Products <a type="button" class="btn btn-dark float-right" href="addproduct.html"> Add Products</a></h1>
-        <!-- Main content [Start] -->
-        <div class="row ">
-            <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name </h5>
-                        <p class="card-text">Short Description</p>
-                        <h5 class="card-title">Price</h5>
-                        <h6 class="card-title">Category</h6>
-                        <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[LEFT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!-- Navigation Section [Start]-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--[Mobile Navigation]-->
+            <div class="nav-inner">
+                <div class="left">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
+                    
+                    <ul class="navbar-nav mr-auto collapse navbar-collapse">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="productlist.html">Products</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[RIGHT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                    <button class="navbar-toggler float-right" type="button" id="mobile-nav-open">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!--[Register Link]-->
+                        <div class="register"> <a href="register.html" class="small">Need an account?</a> </div>
+                        <!--[Username Form]-->
+                        <form class="form-inline mr-2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-at"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <!--[Password Form]-->
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-lock"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-outline-dark ml-2">Login</button>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- Navigation Section [End]-->
+        <div class="container">
+            <h1> Products <a type="button" class="btn btn-dark float-right" href="addproduct.html"> Add Products</a></h1>
+            <!-- Main content [Start] -->
+            <div class="row ">
+                <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Name </h5>
+                            <p class="card-text">Short Description</p>
+                            <h5 class="card-title">Price</h5>
+                            <h6 class="card-title">Category</h6>
+                            <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add
+                            </div>
+                            <button type="button" class="btn btn-dark ml-2">See Product</button>
                         </div>
-                        <button type="button" class="btn btn-dark ml-2">See Product</button>
                     </div>
                 </div>
-            </div>
-            <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name </h5>
-                        <p class="card-text">Short Description</p>
-                        <h5 class="card-title">Price</h5>
-                        <h6 class="card-title">Category</h6>
-                        <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add
+                <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Name </h5>
+                            <p class="card-text">Short Description</p>
+                            <h5 class="card-title">Price</h5>
+                            <h6 class="card-title">Category</h6>
+                            <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add
+                            </div>
+                            <button type="button" class="btn btn-dark ml-2">See Product</button>
                         </div>
-                        <button type="button" class="btn btn-dark ml-2">See Product</button>
                     </div>
                 </div>
-            </div>
-            <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name </h5>
-                        <p class="card-text">Short Description</p>
-                        <h5 class="card-title">Price</h5>
-                        <h6 class="card-title">Category</h6>
-                        <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add </div>
-                        <button type="button" class="btn btn-dark ml-2">See Product</button>
+                <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Name </h5>
+                            <p class="card-text">Short Description</p>
+                            <h5 class="card-title">Price</h5>
+                            <h6 class="card-title">Category</h6>
+                            <div class="btn btn-dark"><i class="fas fa-shopping-basket"></i> Add </div>
+                            <button type="button" class="btn btn-dark ml-2">See Product</button>
+                        </div>
                     </div>
                 </div>
+                <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+            </div> <!-- Row END -->
+        </div><!-- Main content [END] -->
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <footer class="bg-light text-center text-muted fixed-bottom">
+            <div class="text-center text-dark p-3">
+                © 2021 Copyright: <a href="https://cmaz.co.uk">cmaz.co.uk</a>
             </div>
-            <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-        </div> <!-- Row END -->
-    </div><!-- Main content [END] -->
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <footer class="bg-light text-center text-muted fixed-bottom">
-        <div class="text-center text-dark p-3">
-            © 2021 Copyright: <a href="https://cmaz.co.uk">cmaz.co.uk</a>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="core.js"></script>
 </body>
+
 </html>
  

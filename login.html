@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Login Page </title>
+    <title>Home Page </title>
     <!-- Icon in the Tab -->
     <link rel="icon" type="images/png" href="images/favicon-16x16.png">
     <!-- Font Awsome -->
@@ -16,104 +16,145 @@
 </head>
 
 <body>
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <!-- Navigation Section [Start]-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!--[Mobile Navigation]-->
-        <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <nav class="navbar navbar-light bg-light">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="productlist.html">Products</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="categories.html">Categories</a>
-                    </li>
-            </ul>
-            <!--[Register Link]-->
-            <div class="register mr-2"> <a href="register.html">Need an account?</a> </div>
-            <!--[Username Form]-->
-            <form class="form-inline mr-2">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    <div class="mobile-nav-container">
+        <ul class="navbar-nav mr-auto">
+            <div id="mobile-header-user-control">
+                <a href="#" class="nav-link text-dark text-center">Welcome, cmaz!</a>
+                <a class="btn btn-dark ml-2" href="#">
+                    <i class="fas fa-user-times"></i> Logout</a>
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listings.php">Products</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="#" id="navbarDropdown">Catagories</a>
+                <div class="" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">A Cat</a>
                 </div>
-            </form>
-            <!--[Password Form]-->
-            <form class="form-inline">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><img src="images/padlock.png" style="height: 20px"></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+            </li>
+        </ul>
+    </div>
+    <div class="global-container">
+        <div class="mobile-basket-widget">
+            <div class="mobile-basket-widget-inner">
+                <div class="mobile-basket-widget-title">
+                    My Basket
                 </div>
-            </form>
-            <button type="button" class="btn btn-outline-dark ml-2">Login</button>
-        </div>
-    </nav><!-- Navigation Section [End]-->
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <!-- Main content [Start] -->
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Login</div>
-                    <div class="card-body">
-                        <form class="form-horizontal" method="post" action="#">
-                            <div class="form-group">
-                                <label for="name" class="cols-sm-2 control-label">Username or Email </label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="*" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="cols-sm-2 control-label">Password</label>
-                                <div class="cols-sm-10">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="*" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group ">
-                                <button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
-                            </div>
-                            <div class="text-center">
-                                <div>
-                                    <a href="index.html">Need an account?</a>
-                                </div>
-                                <div>
-                                    <a href="index.html">Forgot Password</a>
-                                </div>
-                            </div>
-                        </form>
+                <div class="float-right">
+                    <div class="mobile-basket-widget-total">
+                        <span class="mobile-basket-widget-items">2</span> x <span class="mobile-basket-widget-price">£2.70</span>
                     </div>
+                    <a href="/cart.php" class="btn btn-dark mobile-basket-widget-btn">View Cart</a>
                 </div>
             </div>
         </div>
-    </div><!-- Main content [END] -->
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <footer class="bg-light text-center text-muted fixed-bottom">
-        <div class="text-center text-dark p-3">
-            © 2021 Copyright: <a href="https://cmaz.co.uk">cmaz.co.uk</a>
-        </div>
-    </footer>
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[LEFT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!-- Navigation Section [Start]-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--[Mobile Navigation]-->
+            <div class="nav-inner">
+                <div class="left">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
+                    <ul class="navbar-nav mr-auto collapse navbar-collapse">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="productlist.html">Products</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[RIGHT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                    <button class="navbar-toggler float-right" type="button" id="mobile-nav-open">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!--[Register Link]-->
+                        <div class="register"> <a href="register.html" class="small">Need an account?</a> </div>
+                        <!--[Username Form]-->
+                        <form class="form-inline mr-2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-at"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <!--[Password Form]-->
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-lock"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-outline-dark ml-2">Login</button>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- Navigation Section [End]-->
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!-- Main content [Start] -->
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Login</div>
+                        <div class="card-body">
+                            <form class="form-horizontal" method="post" action="#">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><span class="fa fa-at"></span></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username or Email Address">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><span class="fa fa-lock"></span></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
+                                </div>
+                                <div class="text-center">
+                                    <div>
+                                        <a href="index.html">Need an account?</a>
+                                    </div>
+                                    <div>
+                                        <a href="index.html">Forgot Password</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Main content [END] -->
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <footer class="bg-light text-center text-muted fixed-bottom">
+            <div class="text-center text-dark p-3">
+                © 2021 Copyright: <a href="https://cmaz.co.uk">cmaz.co.uk</a>
+            </div>
+        </footer>
+    </div>
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="core.js"></script>
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
 </body>
 

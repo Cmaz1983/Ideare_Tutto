@@ -204,22 +204,37 @@ a:hover {
     vertical-align: top;
 }
 
-.thankyou{
-  font-weight: 600;
-  font-size: 150px;
-  text-align: center;
+.thankyou {
+    font-weight: 600;
+    font-size: 150px;
+    text-align: center;
 }
 
+.nav-inner{
+    display:flex;
+    width:100%!important;
+    justify-content: space-between;
+}
 
+.nav-inner .left, .nav-inner .right{
+    display:flex;
+    align-items:center;
+    flex-basis: 0;
+    flex-grow: 1;
+}
 
+.nav-inner .right{
+        justify-content: flex-end;
+}
 @media only screen and (max-width: 600px) {
 
     .bsk-desktop {
         display: none;
 
     }
+
     .mobile-basket-widget {
-    display: block;
-  }
+        display: block;
+    }
 
 }

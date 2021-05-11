@@ -55,13 +55,11 @@
         <!-- Navigation Section [Start]-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!--[Mobile Navigation]-->
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
-                <button class="navbar-toggler" type="button" id="mobile-nav-open">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+            <div class="nav-inner">
+                <div class="left">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
+                    
+                    <ul class="navbar-nav mr-auto collapse navbar-collapse">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
@@ -72,14 +70,34 @@
                             <a class="nav-link" href="categories.html">Categories</a>
                         </li>
                     </ul>
+                </div>
+                <div class="right">
                     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[RIGHT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-                    <div class="header-user-control display-flex">
-                        <a href="#" class="nav-link text-dark">Welcome, cmaz!</a><a class="btn btn-dark">Logout</a>
-                    </div>
-                    <div class="basket-container btn btn-dark ml-2">
-                        <i class="fas fa-shopping-basket"></i>
-                        <div class="basket-number ml-1">88</span>
-                        </div>
+                    <button class="navbar-toggler float-right" type="button" id="mobile-nav-open">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!--[Register Link]-->
+                        <div class="register"> <a href="register.html" class="small">Need an account?</a> </div>
+                        <!--[Username Form]-->
+                        <form class="form-inline mr-2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-at"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <!--[Password Form]-->
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><span class="fa fa-lock"></span></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-outline-dark ml-2">Login</button>
                     </div>
                 </div>
             </div>
