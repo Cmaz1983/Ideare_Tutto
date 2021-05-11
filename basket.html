@@ -16,103 +16,128 @@
 </head>
 
 <body>
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <!-- Navigation Section [Start]-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!--[Mobile Navigation]-->
-        <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <nav class="navbar navbar-light bg-light">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="productlist.html">Products</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="categories.html">Categories</a>
-                    </li>
-            </ul>
-            <div class="header-user-control display-flex">
-                <a href="#" class="nav-link text-dark">Welcome, cmaz!</a><a class="btn btn-dark">Logout</a>
+    <div class="mobile-nav-container">
+        <ul class="navbar-nav mr-auto">
+            <div id="mobile-header-user-control">
+                <a href="#" class="nav-link text-dark text-center">Welcome, cmaz!</a>
+                <a class="btn btn-dark ml-2" href="#">
+                    <i class="fas fa-user-times"></i> Logout</a>
             </div>
-        </div>
-        <div class="nav-item mr-auto">
-            <div class="basket-container btn btn-dark ml-2"><i class="fas fa-shopping-basket"></i>
-                <div class="basket-number ml-1">88</span></div>
-            </div>
-        </div>
-    </nav><!-- Navigation Section [End]-->
-    <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <div class="container">
-        <!-- Main content [START] -->
-        <div class="card w-100">
-            <div class="card-header w-100">
-                <h1><i class="fas fa-shopping-basket"></i> Basket</h1>
-                <div class="row">
-                    <div class="col-1">
-                        <h6>Image</h6>
-                    </div>
-                    <div class="col-7">
-                        <h6>Product Name</h6>
-                    </div>
-                    <div class="col-1">
-                        <h6>Price</h6>
-                    </div>
-                    <div class=" col-2">
-                        <h6>Qty</h6>
-                    </div>
-                    <div class=" col-1">
-                    </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listings.php">Products</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="#" id="navbarDropdown">Catagories</a>
+                <div class="" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">A Cat</a>
                 </div>
-                <!--Row[End]-->
+            </li>
+        </ul>
+    </div>
+    <div class="global-container">
+        <div class="mobile-basket-widget">
+            <div class="mobile-basket-widget-inner">
+                <div class="mobile-basket-widget-title">
+                    My Basket
+                </div>
+                <div class="float-right">
+                    <div class="mobile-basket-widget-total">
+                        <span class="mobile-basket-widget-items">2</span> x <span class="mobile-basket-widget-price">£2.70</span>
+                    </div>
+                    <a href="/cart.php" class="btn btn-dark mobile-basket-widget-btn">View Cart</a>
+                </div>
             </div>
-            <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-            <div class="list-group-item">
-                <div class="row pt-2">
-                    <div class="col-1">
-                        <div class="product-img">
+        </div>
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[LEFT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!-- Navigation Section [Start]-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--[Mobile Navigation]-->
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
+                <button class="navbar-toggler" type="button" id="mobile-nav-open">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="productlist.html">Products</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[RIGHT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                    <div class="header-user-control display-flex">
+                        <a href="#" class="nav-link text-dark">Welcome, cmaz!</a><a class="btn btn-dark">Logout</a>
+                    </div>
+                    <div class="basket-container btn btn-dark ml-2">
+                        <i class="fas fa-shopping-basket"></i>
+                        <div class="basket-number ml-1">88</span>
                         </div>
                     </div>
-                    <div class="col-7">
-                        Product Name
+                </div>
+            </div>
+        </nav><!-- Navigation Section [End]-->
+        <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <div class="container my-5">
+            <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+            <div class="bsk-desktop">
+                <div class="cart-title">
+                    <h1>
+                        Please review your basket (<span id="cart-ammount">2</span> items)</h1>
+                </div>
+                <div class="row cart-row">
+                    <div class="col-2">
+                        <img class="cart-image" src="images/1.jpg" alt="">
                     </div>
-                    <div class="col-1">
-                        Price
+                    <div class="col-4">
+                        <div class="cart-product-name">
+                            <a href="/detail.php?id=13" class="text-dark">
+                                Fruit Caramels </a>
+                        </div>
+                        <div class="cart-product-cat">
+                            They come in lemon, blackcurrant, strawberry and orange flavours. </div>
                     </div>
                     <div class="col-2">
-                        <input type="number" class="form-control qty">
+                        <div class="cart-qty">
+                            Qty: <input class="form-control cart-qty-input" type="number" name="qty 13" value="2">
+                        </div>
                     </div>
-                    <div class="col-1">
-                        <button type="button" class="btn btn-dark">X</button>
+                    <div class="col-2 cart-price">
+                        £
+                        2.70 </div>
+                    <div class="col-2">
+                        <div class="cart-remove"><a href="/mng/mng_cart.php?action=delete&amp;id=13" class="text-dark"> <i class="fa fa-times"></i></a></div>
                     </div>
                 </div>
             </div>
-            <!--Row[End]-->
+            <div class="cart-sidebar-mobile">
+                <div class="cart-sum-title">
+                    <h5><i class="fas fa-shopping-basket"></i>
+                        Basket Summary</h5>
+                </div>
+                <hr>
+                <div class="cart-sum-li">
+                    <div class="float-left header-cart-item-name">2 x Fruit Caramels</div>
+                    <div class="float-right">£2.70</div>
+                    <div style="clear:both"></div>
+                </div>
+                <hr>
+                <p class="CartGrandTotal">
+                    Grand Total: <strong>£ 2.70</strong>
+                </p>
+                <a href="#" class="btn btn-dark w-100" role="button">Proceed to Checkout</a>
+                <p></p>
+                <button type="submit" class="btn btn-warning w-100"> Update Cart </button>
+            </div>
         </div>
-        <!--◤◢◣◥◤◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-        <div class="card w-50 mt-5 float-right">
-            <div class="card-header w-100">
-                <h2>Total</h2>
-            </div>
-            <div class="list-group-item">
-                <h6 class="float-left">Order Subtotal</h6>
-                <h6 class="float-right">£xx:xx</h6>
-            </div>
-            <div class="list-group-item">
-                <h6 class="float-left">Shipping and Handing</h6>
-                <h6 class="float-right">£xx:xx</h6>
-            </div>
-            <div class="list-group-item">
-                <h6 class="float-left">Total</h6>
-                <h6 class="float-right">£xx:xx</h6>
-            </div>
-        </div>
-    </div>
     </div><!-- Main content [END] -->
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
     <footer class="bg-light text-center text-muted fixed-bottom">
@@ -120,10 +145,12 @@
             © 2021 Copyright: <a href="https://cmaz.co.uk">cmaz.co.uk</a>
         </div>
     </footer>
+    </div>
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="core.js"></script>
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
 </body>
 

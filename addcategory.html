@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Admin - Add Product
-    </title>
+    <title>Home Page </title>
     <!-- Icon in the Tab -->
     <link rel="icon" type="images/png" href="images/favicon-16x16.png">
     <!-- Font Awsome -->
@@ -17,29 +16,74 @@
 </head>
 
 <body>
-    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
-    <!-- Navigation Section [Start]-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <!--[Mobile Navigation]-->
-        <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <nav class="navbar navbar-light bg-light">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="productlist.html">Products</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="categories.html">Categories</a>
-                    </li>
-            </ul>
+    <div class="mobile-nav-container">
+        <ul class="navbar-nav mr-auto">
+            <div id="mobile-header-user-control">
+                <a href="#" class="nav-link text-dark text-center">Welcome, cmaz!</a>
+                <a class="btn btn-dark ml-2" href="#">
+                    <i class="fas fa-user-times"></i> Logout</a>
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/listings.php">Products</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="#" id="navbarDropdown">Catagories</a>
+                <div class="" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">A Cat</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="global-container">
+        <div class="mobile-basket-widget">
+            <div class="mobile-basket-widget-inner">
+                <div class="mobile-basket-widget-title">
+                    My Basket
+                </div>
+                <div class="float-right">
+                    <div class="mobile-basket-widget-total">
+                        <span class="mobile-basket-widget-items">2</span> x <span class="mobile-basket-widget-price">£2.70</span>
+                    </div>
+                    <a href="/cart.php" class="btn btn-dark mobile-basket-widget-btn">View Cart</a>
+                </div>
+            </div>
         </div>
-    </nav><!-- Navigation Section [End]-->
+        <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[LEFT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+        <!-- Navigation Section [Start]-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--[Mobile Navigation]-->
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/logo2.png" height="50px"></a>
+                <button class="navbar-toggler" type="button" id="mobile-nav-open">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="productlist.html">Products</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                    </ul>
+                    <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢[RIGHT SIDE - HEADER]◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
+                    <div class="header-user-control display-flex">
+                        <a href="#" class="nav-link text-dark">Welcome, cmaz!</a><a class="btn btn-dark">Logout</a>
+                    </div>
+                    <div class="basket-container btn btn-dark ml-2">
+                        <i class="fas fa-shopping-basket"></i>
+                        <div class="basket-number ml-1">88</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- Navigation Section [End]-->
     <!--◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥-->
     <!-- Main content [Start] -->
     <div class="container mt-5">
