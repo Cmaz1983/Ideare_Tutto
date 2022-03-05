@@ -41,7 +41,7 @@
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
 				// Check if password matches database
 				if(password_verify($password, $row['user_password'])){
-					if($row['user_activated'] === "1"){ // Check if user is activated
+					if($row['user_activated'] == "1"){ // Check if user is activated
 						@session_start();
 						$_SESSION['uid'] = $row['user_id']; // Set user id to session
 						echo json_success(); // :)
@@ -103,7 +103,7 @@
 		$enc_password = password_hash($password, PASSWORD_BCRYPT, ["cost"=>12]);
 		$verification_code = uniqid();
 
-		ini_set('SMTP','192.168.1.4');
+		ini_set('SMTP','localhost');
 		ini_set('smtp_port',25);
 		$headers  = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
