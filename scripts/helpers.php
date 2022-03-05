@@ -41,7 +41,7 @@ function getPOST(string $var){
 
 function sanitizeValue(string $var){
     $value = null;
-    $value = filter_var($var, FILTER_SANITIZE_STRING);
+    $value = filter_var($var, FILTER_UNSAFE_RAW);
     if($value){
         if(strlen($value) < 3){
 			$value = false;
